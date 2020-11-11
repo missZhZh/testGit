@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     lateinit var tv : TextView
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         tv = findViewById(R.id.hello)
         tv.setOnClickListener {
+            Toast.makeText(this,"测试",Toast.LENGTH_LONG).show();
             startActivity(Intent(this,Aactivity::class.java))
         }
     }
